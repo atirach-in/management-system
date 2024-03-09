@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "d3fd23ce-1146-4ad8-8a88-24cb5e0062f0",
+		"name": "Interview_GO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3794711",
+		"_collection_link": "https://lffintech.postman.co/workspace/My-Workspace~3d7218aa-5648-4c2a-86d8-673371bf247c/collection/3794711-d3fd23ce-1146-4ad8-8a88-24cb5e0062f0?action=share&source=collection_link&creator=3794711"
+	},
+	"item": [
+		{
+			"name": "List Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{interview}}/all",
+					"host": [
+						"{{interview}}"
+					],
+					"path": [
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Python\",\r\n    \"description\": \"Learn python\",\r\n    \"status\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{interview}}/create",
+					"host": [
+						"{{interview}}"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"title\": \"Python 2\",\r\n    \"description\": \"Learn python 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{interview}}/update",
+					"host": [
+						"{{interview}}"
+					],
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Status Task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"status\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{interview}}/update/status",
+					"host": [
+						"{{interview}}"
+					],
+					"path": [
+						"update",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{interview}}/by/:id",
+					"host": [
+						"{{interview}}"
+					],
+					"path": [
+						"by",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{interview}}/:id",
+					"host": [
+						"{{interview}}"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
